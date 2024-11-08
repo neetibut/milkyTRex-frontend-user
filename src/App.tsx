@@ -1,5 +1,7 @@
-import Home from "./pages/Home";
-
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 
 
@@ -8,6 +10,8 @@ import Home from "./pages/Home";
 
 export default function App() {
   return (
-     <Home/>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
   )
 }
