@@ -5,8 +5,10 @@ const Home = () => {
     <>
     <div
         className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     "
-        style={{ backgroundImage: `url('/src/assets/img/Rectangle 2.svg')` }}
-      >
+      ><img 
+      src='/src/assets/img/Rectangle 2.svg'
+       className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+       alt='backgroung image cover'/>
         <div className="me-8 flex flex-col text-left sm:justify-center">
           <h1 className="text-xl w-37 font-semibold  text-white ">
             อยากรู้ไหมว่าคุณเหมาะกับชาแบบไหน ?
