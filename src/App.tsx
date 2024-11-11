@@ -1,6 +1,6 @@
 import Home from "./pages/Home";
-
-
+import Footer from "./components/Footer";
+import AboutTea from "./components/AboutTea";
 
 
 
@@ -8,6 +8,11 @@ import Home from "./pages/Home";
 
 export default function App() {
   return (
-     <Home/>
+    <>
+      <Home/>
+      <AboutTea />
+      <Footer />
+    </>
+
   )
 }
