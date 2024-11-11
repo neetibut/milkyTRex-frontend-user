@@ -2,10 +2,13 @@
 import './App.css'
 import Review from './components/Review'
 import Navbar from './components/Navbar'
-import Test from './test'
+
 import Shopchoice from './components/Shopchoice'
 
 
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import AboutTea from "./components/AboutTea";
 
 
 
@@ -13,13 +16,8 @@ import Shopchoice from './components/Shopchoice'
 
 export default function App() {
   return (
-    
-    <>
-    <Navbar />
-    {/* <Review /> */}
-    {/* <Test /> */}
-    {/* <Shopchoice /> */}
-   
-     </>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
   )
 }
