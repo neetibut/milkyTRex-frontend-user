@@ -1,14 +1,15 @@
-import React from 'react'
+import React from "react";
+import Homebanner from "../components/Homebanner";
 
 const Home = () => {
   return (
     <>
-    <div
-        className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     "
-      ><img 
-      src='/src/assets/img/Rectangle 2.svg'
-       className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-       alt='backgroung image cover'/>
+      <div className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     ">
+        <img
+          src="/src/assets/backgroundcover.svg"
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+          alt="background image cover"
+        />
         <div className="me-8 flex flex-col text-left sm:justify-center">
           <h1 className="text-xl w-37 font-semibold  text-white ">
             อยากรู้ไหมว่าคุณเหมาะกับชาแบบไหน ?
@@ -26,16 +27,17 @@ const Home = () => {
           <br />
           <div className="flex items-center text-white underline">
             <img
-              src="/src/assets/img/ของขวัญ.svg"
+              src="/src/assets/gifticon.svg"
               alt="gift icon"
               className="mr-2 w-6 h-6"
             />
-            <a href='#'>แด่คนพิเศษในแบบคุณ</a>
+            <a href="#">แด่คนพิเศษในแบบคุณ</a>
           </div>
         </div>
       </div>
+      <Homebanner/>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
