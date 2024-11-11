@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
 
 function Shopchoice() {
   // กำหนด state สำหรับเลือก option
   const [selectedOption, setSelectedOption] = useState('option1');
 
   // ฟังก์ชันที่จัดการการเปลี่ยนแปลงค่าจาก select
-  const handleChange = (event) => {
+  
+  const handleChange = (event :any) => {
     setSelectedOption(event.target.value);
   };
 
