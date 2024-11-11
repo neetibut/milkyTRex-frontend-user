@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-  <div className='bg-black h-[1280px] w-[1280px]'>
+  <div className='bg-black'> 
   {/* ส่วนของ Sign In/Sign Up */}
   {/* <div className="px-4 py-2">
     <ul className="flex justify-end gap-6 text-gray-900">
