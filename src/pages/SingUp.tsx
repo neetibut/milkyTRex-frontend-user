@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 
-const SignUpForm = () => {
+interface SignUpFormProps {
+  onSignUp: (userData: { username: string; email: string; password: string }) => void;
+}
+
+const SignUpForm = ({ onSignUp }: SignUpFormProps) => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
 
   const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Sign Up with:", { firstName, email, password });
+    onSignUp({ username, email, password });
+    setUsername("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -28,9 +35,9 @@ const SignUpForm = () => {
             <div>
               <input
                 type="text"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-                placeholder="First Name"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="User Name"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
