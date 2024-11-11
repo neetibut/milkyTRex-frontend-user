@@ -5,7 +5,7 @@ import instagramLogo from '../assets/Instagram-logo.svg';
 
 const Footer = () => {
     return (
-        <div>
+        <div className="bg-slate-600">
             <div className="flex justify-between">
                 <div className="text-left">
                     <h1>MILKY-TEA-REX</h1>

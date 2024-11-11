@@ -5,7 +5,7 @@ const Home = () => {
     <>
     <div
         className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     "
-        style={{ backgroundImage: `url('/src/assets/img/Rectangle 2.svg')` }}
+        style={{ backgroundImage: `url('/src/assets/Rectangle 2.svg')` }}
       >
         <div className="me-8 flex flex-col text-left sm:justify-center">
           <h1 className="text-xl w-37 font-semibold  text-white ">
@@ -24,7 +24,7 @@ const Home = () => {
           <br />
           <div className="flex items-center text-white underline">
             <img
-              src="/src/assets/img/ของขวัญ.svg"
+              src="/src/assets/ของขวัญ.svg"
               alt="gift icon"
               className="mr-2 w-6 h-6"
             />
