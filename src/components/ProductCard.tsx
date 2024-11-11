@@ -10,13 +10,27 @@ type ProductCardProps = {
   imageUrl: string;
 };
 
-const ProductCard: React.FC<ProductCardProps> = ({ name, weight, price, imageUrl }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ 
+  name, 
+  weight, 
+  price
+  
+}) => {
   return (
-    <div className="border p-4 rounded-lg ">
-      <img src="https://monsoontea.co.th/cdn/shop/files/RainbowBlend50gtinWeb_1024x1024@2x.jpg?v=1695122791" alt={name} className="w-full h-auto mb-2" />
-      <h2 className="text-md font-semibold">{name}</h2>
-      <p className="text-sm">{weight}</p>
-      <p className="text-md font-bold">{price}</p>
+    <div className="border p-4 rounded-lg transition-transform hover:scale-105 hover:shadow-lg">
+      <div className="relative aspect-square mb-2">
+        <img 
+          src={rainbow} 
+          alt={name} 
+          className="w-full h-full object-cover rounded-md"
+          onError={(e) => {
+            e.currentTarget.src = '/placeholder.jpg'; // ใส่รูป placeholder กรณีโหลดรูปไม่สำเร็จ
+          }}
+        />
+      </div>
+      <h2 className="text-md font-semibold truncate">{name}</h2>
+      <p className="text-sm text-gray-600">{weight}</p>
+      <p className="text-md font-bold text-green-600">{price}</p>
     </div>
   );
 };
