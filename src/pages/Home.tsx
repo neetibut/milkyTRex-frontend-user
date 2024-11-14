@@ -1,14 +1,14 @@
 
 import Homebanner from "../components/Homebanner";
 import Blog from "../components/Blog";
-
+import Bgcover from "../assets/Backgroundcover.svg"
 
 const Home = () => {
   return (
     <>
       <div className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     ">
         <img
-          src="/Backgroundcover.svg"
+          src={Bgcover}
           className="absolute top-0 left-0 w-full h-full object-cover -z-10"
           alt="background image cover"
         />
