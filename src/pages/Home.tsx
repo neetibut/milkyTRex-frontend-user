@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <div className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     ">
         <img
-          src="/src/assets/backgroundcover.svg"
+          src="/public/backgroundcover.svg"
           className="absolute top-0 left-0 w-full h-full object-cover -z-10"
           alt="background image cover"
         />
