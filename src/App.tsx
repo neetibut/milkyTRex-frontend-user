@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 
 import Shopchoice from './components/Shopchoice'
 
-import Carousel from './components/Carousel'
+
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AboutTea from "./components/AboutTea";
@@ -16,6 +16,13 @@ import  { BrowserRouter } from 'react-router-dom';
 
 export default function App() {
   return (
+    <>
+      <Navbar />
+      <Home />
+      <Review />
+      <AboutTea />
+      <Footer />
+    </>
     <BrowserRouter>
       <Navbar />
       <Home />
