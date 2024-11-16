@@ -17,7 +17,7 @@ const Navbar = () => {
   <div className='flex flex-row'>
     <p className="text-2xl font-bold">Milky-Tea-Rex</p>
     <div>
-      <ul className="flex gap-6 text-lg px-4 py-1">
+      <ul className="flex gap-6 text-lg px-4 py-1 ">
         <li className="hover:text-gray-400 cursor-pointer">SampleBox</li>
         <li className="hover:text-gray-400 cursor-pointer">Shop</li>
         <li className="hover:text-gray-400 cursor-pointer">Blog</li>
@@ -33,7 +33,7 @@ const Navbar = () => {
         กาแฟของฉัน
       </li> */}
       <li className="hover:text-gray-400 cursor-pointer py-4">
-        <img src="https://icon-library.com/images/login-icon-images/login-icon-images-0.jpg" className='w-8 h-8' />
+        <img src="src/assets/login.png" className='w-8 h-8' />
       </li>
       <li className="hover:text-gray-400 cursor-pointer flex flex-row py-4">
       
@@ -53,3 +53,4 @@ export default Navbar
 
 // https://tse3.mm.bing.net/th?id=OIP.Ww1Niq2gmBPFhF0h1wc4IQHaHa&pid=Api&P=0&h=220
 // https://tse2.mm.bing.net/th?id=OIP.36W6g6n6PVVHU4tJDXm43AHaHK&pid=Api&P=0&h=220
+// "https://icon-library.com/images/login-icon-images/login-icon-images-0.jpg"
