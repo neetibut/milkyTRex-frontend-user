@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-  <div className='bg-black'> 
+  <div className=' fixed w-full'> 
   {/* ส่วนของ Sign In/Sign Up */}
   {/* <div className="px-4 py-2">
     <ul className="flex justify-end gap-6 text-gray-900">
@@ -13,8 +13,8 @@ const Navbar = () => {
 
   {/* ส่วนของ Nav Bar */}
   
-  <div className="flex justify-between items-center bg-white text-black px-6 py-2 rounded-b-xl shadow-lg">
-  <div className='flex flex-row'>
+  <div className="flex justify-between items-center bg-white text-black px-6 py-2 rounded-b-xl shadow-lg ">
+  <div className='flex flex-row '>
     <p className="text-2xl font-bold">Milky-Tea-Rex</p>
     <div>
       <ul className="flex gap-6 text-lg px-4 py-1">

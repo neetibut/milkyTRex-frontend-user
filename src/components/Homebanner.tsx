@@ -39,7 +39,7 @@ const Homebanner = () => {
       </div>
 
       {/* Right Section */}
-      <div className="flex flex-col relative w-full h-auto md:w-1/3  bg-green-300  p-0  justify-between shadow-md  ">
+      <div className="flex flex-col  w-full h-auto md:w-1/3  bg-green-300  p-0  justify-between shadow-md  ">
         <p className="text-white font-semibold">
           แนะนำชาให้ คุณโดยเฉพาะ ใน 1 นาที
         </p>
