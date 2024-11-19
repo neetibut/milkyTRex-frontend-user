@@ -12,7 +12,7 @@ const Blog = () => {
         </button>
       </div>
       <div className="flex-row pl-5 hidden md:flex ">
-        <div className="px-0 m-5  rounded-3xl bg-slate-300  border-2 border-black">
+        <div className="px-0 m-5  rounded-3xl bg-slate-200  border-2 border-black">
           <div className="p-0">
             <img
               src="src/assets/backgroundcover.svg"
