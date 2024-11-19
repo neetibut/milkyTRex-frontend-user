@@ -1,13 +1,14 @@
 
 import './App.css'
-import Review from './components/Review'
 import Navbar from './components/Navbar'
-import AboutTea from './components/AboutTea'
-import Shopchoice from './components/Shopchoice'
-import Footer from './components/Footer'
+
+// import Shopchoice from './components/Shopchoice'
 
 
 import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import AboutTea from "./components/AboutTea";
+import Review from './components/Review';
 
 
 
@@ -18,10 +19,12 @@ import Home from "./pages/Home";
 export default function App() {
   return (
     <>
-    <Navbar />
-    <Home />
-    <AboutTea />
-    <Footer />
-  </>
-  )
+      <Navbar />
+      <Home />
+      <Review />
+      <AboutTea />
+      {/* <Shopchoice /> */}
+      <Footer />
+    </>
+    )
 }

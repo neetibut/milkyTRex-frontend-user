@@ -1,15 +1,17 @@
-// import React from "react";
+
 import Homebanner from "../components/Homebanner";
 import Blog from "../components/Blog";
-import Footer from "../components/Footer";
+import Bgcover from "../assets/Backgroundcover.svg"
 
 const Home = () => {
   return (
     <>
-    <div
-        className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     "
-        style={{ backgroundImage: `url('/src/assets/backgroundcover.svg')` }}
-      >
+      <div className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     ">
+        <img
+          src={Bgcover}
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+          alt="background image cover"
+        />
         <div className="me-8 flex flex-col text-left sm:justify-center">
           <h1 className="text-xl w-37 font-semibold  text-white ">
             อยากรู้ไหมว่าคุณเหมาะกับชาแบบไหน ?
@@ -27,7 +29,7 @@ const Home = () => {
           <br />
           <div className="flex items-center text-white underline">
             <img
-              src="/src/assets/gifticon.svg"
+              src="/src/assets/Gifticon.svg"
               alt="gift icon"
               className="mr-2 w-6 h-6"
             />
