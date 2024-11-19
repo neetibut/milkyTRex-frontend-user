@@ -20,12 +20,12 @@ const ReviewSlider = () => {
               <div className="font-bold text-lg text-gray-800">Name</div>
               <div className="flex items-center space-x-2">
                 <div className="text-gray-600 text-base font-bold">Rate</div>
-                <i class="fas fa-star text-yellow-500 text-sm"></i>
-                <i class="fas fa-star text-yellow-500 text-sm"></i>
-                <i class="fas fa-star text-yellow-500 text-sm"></i>
+                <i className="fas fa-star text-yellow-500 text-sm"></i>
+                <i className="fas fa-star text-yellow-500 text-sm"></i>
+                <i className="fas fa-star text-yellow-500 text-sm"></i>
                 
-                <i class="far fa-star text-gray-400 text-sm"></i>
-                <i class="fas fa-star-half-alt text-yellow-500 text-sm"></i>
+                <i className="far fa-star text-gray-400 text-sm"></i>
+                <i className="fas fa-star-half-alt text-yellow-500 text-sm"></i>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ const ReviewSlider = () => {
 
   return (
     <div className="bg-slate-300 w-full">
-      <div className='bg-slate-600 py-4 text-white text-xl font-semibold'>Review ลูกค้า</div>
+      <div className='bg-slate-600 py-4 text-white text-xl font-semibold text-center'>Review ลูกค้า</div>
       <div className="w-full max-w-5xl mx-auto">
         <div className="relative flex items-center justify-center gap-8 p-4">
           {/* Previous button */}

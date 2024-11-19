@@ -54,7 +54,7 @@ function Shopchoice() {
         {/* แสดงผลข้อความเมื่อมีการเลือก */}
         <div>
       {  <p className='flex justify-start pl-20'>{displayText}</p>}    
-      <select className="w-30 py-2 px-4 mt-4 mb-4 border-2 border-black rounded-lg text-lg"  onChange={handleChange} value={selectedOption}>
+      <select className="w-30 py-2  px-4 mt-4 mb-4 ml-20 border-2 border-black rounded-lg text-lg"  onChange={handleChange} value={selectedOption}>
         <option value="">กรุณาเลือก</option>
         <option value="option1">100 g</option>
         <option value="option2">200 g</option>
@@ -66,7 +66,7 @@ function Shopchoice() {
             <div className='px-8'> {point}</div>
             <button onClick={increase}  className="w-8 h-8 bg-white text-black border-2 border-black font-bold rounded-full flex items-center justify-center">+</button>
         </div>
-           <div>
+           <div className='ml-20'>
            <Btnbasketshopchoice/>
 
            </div>
