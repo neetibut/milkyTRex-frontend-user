@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AboutTea from "./components/AboutTea";
-
+import CoffeeSampleProduct from './components/SolutionAi';
 
 
 
@@ -17,6 +17,7 @@ export default function App() {
       <Home />
       <Review />
       <AboutTea />
+      <CoffeeSampleProduct />
       <Footer />
     </>
   )
