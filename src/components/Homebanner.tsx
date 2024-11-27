@@ -1,4 +1,7 @@
-
+import glass from '../assets/glass.png'
+import greenTea from '../assets/green-tea.png'
+import tea from '../assets/tea.png'
+import phone from '../assets/phone.png'
 
 const Homebanner = () => {
   return (
@@ -10,7 +13,7 @@ const Homebanner = () => {
           <div className="h-full bg-green-300   p-4 pr-0 pb-0 flex flex-col justify-between shadow-md hover:scale-110 transition duration-300 ">
             <p className="text-white font-semibold">ชิมชาใน ขนาดทดลอง 40 ก.</p>
             <img
-              src="src/assets/green-tea.png"
+              src={greenTea}
               className="h-[230px] ml-auto"
               alt="Sample tea 40g"
             />
@@ -21,7 +24,7 @@ const Homebanner = () => {
               คัดสรรชาใหม่ๆ ให้คุณชิมไม่มีเบื่อ
             </p>
             <img
-              src="/src/assets/glass.png"
+              src={glass}
               className=" ml-auto mt-auto"
               alt="Curated tea selection"
             />
@@ -31,7 +34,7 @@ const Homebanner = () => {
         <div className=" h-full bg-green-300 flex-1  p-4 pb-0 flex flex-col justify-between shadow-md hover:scale-110 transition duration-300">
           <p className="text-white font-semibold">4 โรงอบในกล่องเดียว</p>
           <img
-            src="/src/assets/tea.png"
+            src={tea}
             className="ml-auto mt-auto"
             alt="4 tea packages"
           />
@@ -44,7 +47,7 @@ const Homebanner = () => {
           แนะนำชาให้ คุณโดยเฉพาะ ใน 1 นาที
         </p>
         <img
-          src="/src/assets/phone.png"
+          src={phone}
           className=" ml-auto mt-auto"
           alt="Personalized tea recommendation"
         />
