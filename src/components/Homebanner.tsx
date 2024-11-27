@@ -7,7 +7,7 @@ const Homebanner = () => {
       <div className="w-full h-full flex flex-col gap-2.5 md:w-2/3  space-y-2.5 ">
         <div className="grid grid-cols-2 gap-5 h-full">
           {/* Box 1 */}
-          <div className="h-full bg-green-300   p-4 pr-0 pb-0 flex flex-col justify-between shadow-md hover:scale-110">
+          <div className="h-full bg-green-300   p-4 pr-0 pb-0 flex flex-col justify-between shadow-md hover:scale-110 transition duration-300 ">
             <p className="text-white font-semibold">ชิมชาใน ขนาดทดลอง 40 ก.</p>
             <img
               src="src/assets/green-tea.png"
@@ -16,7 +16,7 @@ const Homebanner = () => {
             />
           </div>
           {/* Box 2 */}
-          <div className=" h-full bg-green-300   p-4 pr-0 pb-0 flex flex-col justify-between shadow-md hover:scale-110">
+          <div className=" h-full bg-green-300   p-4 pr-0 pb-0 flex flex-col justify-between shadow-md hover:scale-110 transition duration-300">
             <p className="text-white font-semibold">
               คัดสรรชาใหม่ๆ ให้คุณชิมไม่มีเบื่อ
             </p>
@@ -28,7 +28,7 @@ const Homebanner = () => {
           </div>
         </div>
         {/* Bottom Row */}
-        <div className=" h-full bg-green-300 flex-1  p-4 pb-0 flex flex-col justify-between shadow-md hover:scale-110">
+        <div className=" h-full bg-green-300 flex-1  p-4 pb-0 flex flex-col justify-between shadow-md hover:scale-110 transition duration-300">
           <p className="text-white font-semibold">4 โรงอบในกล่องเดียว</p>
           <img
             src="/src/assets/tea.png"
@@ -39,7 +39,7 @@ const Homebanner = () => {
       </div>
 
       {/* Right Section */}
-      <div className="flex flex-col relative w-full h-auto md:w-1/3  bg-green-300  pt-4  justify-between shadow-md  hover:scale-110">
+      <div className="flex flex-col  w-full h-auto md:w-1/3  bg-green-300 pl-4 pt-4  justify-between shadow-md  hover:scale-110 transition duration-300">
         <p className="text-white font-semibold">
           แนะนำชาให้ คุณโดยเฉพาะ ใน 1 นาที
         </p>
