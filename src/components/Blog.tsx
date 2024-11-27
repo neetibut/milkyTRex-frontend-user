@@ -1,5 +1,6 @@
 import backgroundImage from "../assets/backgroundcover.svg";
 
+
 const Blog = () => {
 
   const cards = [
