@@ -11,15 +11,15 @@ type Product = {
   imageUrl: string;
 };
 
-const products: Product[] = Array(8).fill({
+const products: Product[] = Array(16).fill({
   id: 1,
   name: "Tea Blend",
   weight: "100g",
   price: "฿125",
-  imageUrl: "./assets/im", // Replace with your actual image path
+  imageUrl: "./assets/im", 
 });
 
-const ProductListPage: React.FC = () => {
+const Product: React.FC = () => {
   return (
     <div className="flex">
       {/* Sidebar */}
@@ -44,4 +44,4 @@ const ProductListPage: React.FC = () => {
   );
 };
 
-export default ProductListPage;
+export default Product;
