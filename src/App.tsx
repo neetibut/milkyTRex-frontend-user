@@ -2,7 +2,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 
-// import Shopchoice from './components/Shopchoice'
+import Shopchoice from './components/Shopchoice'
 
 
 import Home from "./pages/Home";
@@ -23,7 +23,7 @@ export default function App() {
       <Home />
       <Review />
       <AboutTea />
-      {/* <Shopchoice /> */}
+      <Shopchoice />
       <Footer />
     </>
     )
