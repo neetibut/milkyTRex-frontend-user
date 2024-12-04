@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import AboutTea from "./components/AboutTea";
 import Review from './components/Review';
 import Product from "./pages/Product";
-
+import Ai from './pages/Ai';
 
 
 
@@ -24,6 +24,7 @@ export default function App() {
       <Home />
       <Review />
       <AboutTea />
+      <Ai />
       <Footer />
       <Shopchoice/>
       <Product/>
