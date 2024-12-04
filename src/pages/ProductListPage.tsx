@@ -30,6 +30,38 @@ const PRODUCTS: Product[] = [
     imageUrl: "/path/to/black-tea-image.jpg",
     category: "black-tea"
   },
+  {
+    id: 3,
+    name: "Green Tea Blend",
+    weight: "100g",
+    price: "฿125",
+    imageUrl: "/path/to/green-tea-image.jpg",
+    category: "green-tea"
+  },
+  {
+    id: 4,
+    name: "Black Tea Classic",
+    weight: "100g",
+    price: "฿150",
+    imageUrl: "/path/to/black-tea-image.jpg",
+    category: "black-tea"
+  },
+  {
+    id: 5,
+    name: "Green Tea Blend",
+    weight: "100g",
+    price: "฿125",
+    imageUrl: "/path/to/green-tea-image.jpg",
+    category: "green-tea"
+  },
+  {
+    id: 6,
+    name: "Black Tea Classic",
+    weight: "100g",
+    price: "฿150",
+    imageUrl: "/path/to/black-tea-image.jpg",
+    category: "black-tea"
+  },
   // Add more products...
 ];
 

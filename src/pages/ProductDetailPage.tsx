@@ -1,6 +1,7 @@
 // src/pages/ProductDetailPage.tsx
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Shopchoice from '../components/Shopchoice';
 
 type Product = {
   id: number;
@@ -43,8 +44,9 @@ const ProductDetailPage: React.FC = () => {
       >
         ← Back to Products
       </button>
+      <Shopchoice/>
       
-      <div className="flex">
+      {/* <div className="flex">
         <div className="w-1/2 pr-4">
           <img 
             src={product.imageUrl} 
@@ -75,7 +77,7 @@ const ProductDetailPage: React.FC = () => {
             Add to Cart
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
