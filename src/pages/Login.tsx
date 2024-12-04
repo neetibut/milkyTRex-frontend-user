@@ -4,7 +4,7 @@ interface LoginFormProps {
   onLogin: (credentials: { email: string; password: string }) => void;
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
+const Login: React.FC<LoginFormProps> = ({ onLogin }) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
@@ -19,12 +19,12 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
-      <div 
-        className="absolute inset-0 bg-cover bg-center" 
-        style={{ backgroundImage: `url('your-background-image-url.jpg')` }}
-      />
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('../src/assets/283547_0.jpg')" }}/>
+        {/* เพิ่มรูป background */}
       <div className="absolute inset-0 bg-black opacity-40" />
-      
+
       <div className="relative w-full max-w-md bg-white p-8 rounded-lg shadow-lg z-10">
         <h2 className="text-center text-2xl font-semibold text-gray-800 mb-2">
           Sign in to Milky Tea-rex
@@ -32,7 +32,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
         <p className="text-center text-sm text-gray-600 mb-6">
           Quick & Simple way to Automate your payment
         </p>
-        
+
         <form onSubmit={handleSubmit} className="flex flex-col items-center space-y-4">
           <input
             type="email"
@@ -90,11 +90,11 @@ const LoginForm: React.FC<LoginFormProps> = ({ onLogin }) => {
         </div>
 
         <p className="text-center text-xs text-gray-500 mt-6">
-          © 2023. All Rights Reserved. Milky Tea-rex
+          © 2024. All Rights Reserved. Milky Tea-rex
         </p>
       </div>
     </div>
   );
-};
+}
 
-export default LoginForm;
+export default Login;

@@ -72,7 +72,7 @@ const Selecctness = () => {
             onClick={() => console.log('Selected option: skip')}
             className="inline-block px-6 py-2 bg-gray-200 rounded-md hover:bg-gray-300 transition duration-200"
           >
-            ข้าม
+            ถัดไป
           </button>
         </div>
       </div>

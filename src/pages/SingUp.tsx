@@ -4,7 +4,7 @@ interface SignUpFormProps {
   onSignUp: (userData: { username: string; email: string; password: string }) => void;
 }
 
-const SignUpForm = ({ onSignUp }: SignUpFormProps) => {
+const Signup = ({ onSignUp }: SignUpFormProps) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +21,8 @@ const SignUpForm = ({ onSignUp }: SignUpFormProps) => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg relative">
         <div className="absolute inset-0 bg-cover bg-center" 
-        style={{ backgroundImage: `url('your-background-image-url.jpg')` }} />
+          style={{ backgroundImage: `url('')` }} /> 
+          {/* เพิ่มรูป background */}
         <div className="absolute inset-0 bg-black opacity-40 rounded-lg" />
         <div className="relative z-10">
           <h2 className="text-center text-2xl font-semibold text-gray-800 mb-2">
@@ -100,11 +101,11 @@ const SignUpForm = ({ onSignUp }: SignUpFormProps) => {
         </div>
 
         <p className="text-center text-xs text-gray-500 mt-6">
-          © 2023. All Rights Reserved. Milky Tea-rex
+          © 2024. All Rights Reserved. Milky Tea-rex
         </p>
       </div>
     </div>
   );
 };
 
-export default SignUpForm;
+export default Signup;

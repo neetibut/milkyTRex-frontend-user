@@ -1,7 +1,6 @@
 import React from "react";
 import Homebanner from "../components/Homebanner";
 import Blog from "../components/Blog";
-import React from 'react'
 import { Link } from 'react-router-dom';
 
 const Home = () => {
