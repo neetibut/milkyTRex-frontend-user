@@ -1,33 +1,28 @@
-import { BrowserRouter } from 'react-router-dom';
-import './App.css'
-import Review from './components/Review'
-import Start from './pages/Start'
-import Navbar from './components/Navbar'
-import Shopchoice from './components/Shopchoice'
-import Home from "./pages/Home";
-import Footer from "./components/Footer";
-import AboutTea from "./components/AboutTea";
-import Loading from "./components/Loading";
-import Selecctness from "./components/Selectness";
-import Selecct from "./components/Select";
-import RatingPage from "./components/Ratings";
+// src/App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import ProductListPage from './pages/ProductListPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Navbar />
-      {/* <Home />
-      <Start />
-      <Review />
-      <AboutTea />
-      <Shopchoice /> */}
-      <Selecctness />
-      <Selecct />
-      <Loading />
-      <RatingPage />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductListPage />} />
+        <Route path="/products/:id" element={<ProductDetailPage />} />
+        <Route path="/green-tea" element={<ProductListPage />} />
+        <Route path="/black-tea" element={<ProductListPage />} />
+        <Route path="/white-tea" element={<ProductListPage />} />
+        <Route path="/oolong-tea" element={<ProductListPage />} />
+      </Routes>
       <Footer />
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;

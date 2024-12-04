@@ -1,14 +1,14 @@
-import React from "react";
+
 import Homebanner from "../components/Homebanner";
 import Blog from "../components/Blog";
-import { Link } from 'react-router-dom';
+import Bgcover from "../assets/Backgroundcover.svg"
 
 const Home = () => {
   return (
     <>
       <div className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center   min-h-screen min-w-screen     ">
         <img
-          src="/src/assets/backgroundcover.svg"
+          src={Bgcover}
           className="absolute top-0 left-0 w-full h-full object-cover -z-10"
           alt="background image cover"
         />
@@ -31,7 +31,7 @@ const Home = () => {
           <br />
           <div className="flex items-center text-white underline">
             <img
-              src="/src/assets/gifticon.svg"
+              src="/src/assets/Gifticon.svg"
               alt="gift icon"
               className="mr-2 w-6 h-6"
             />
@@ -41,6 +41,7 @@ const Home = () => {
       </div>
       <Homebanner/>
       <Blog/>
+      
     </>
   );
 }
