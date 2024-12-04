@@ -2,7 +2,7 @@
 
 const Navbar = () => {
     return (
-        <div className='bg-black fixed w-full'> 
+        <div className='bg-black fixed w-full  z-50'> 
           {/* ส่วนของ Sign In/Sign Up */}
           {/* <div className="px-4 py-2">
             <ul className="flex justify-end gap-6 text-gray-900">
