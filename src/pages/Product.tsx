@@ -21,7 +21,7 @@ const products: Product[] = Array(16).fill({
 
 const Product: React.FC = () => {
   return (
-    <div className="flex">
+    <div className="flex pt-[81px]">
       {/* Sidebar */}
       <Sidebar />
 
