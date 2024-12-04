@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import Homebanner from "../components/Homebanner";
 import Blog from "../components/Blog";
 import Bgcover from "../assets/Backgroundcover.svg"
