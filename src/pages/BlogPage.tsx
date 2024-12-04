@@ -36,7 +36,8 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <Box>
+    <div>
+    <Box >
       {/* Carousel */}
       <Box
         sx={{
@@ -143,6 +144,7 @@ const BlogPage = () => {
         ))}
       </Box>
     </Box>
+    </div>
   );
 };
 
