@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/backgroundcover.svg";
+
 import { Link } from 'react-router-dom';
 
 // กำหนดประเภทสำหรับ Card
