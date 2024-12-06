@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
-interface SignUpFormProps {
-  onSignUp: (userData: { username: string; email: string; password: string }) => void;
-}
+// interface SignUpFormProps {
+//   onSignUp: (userData: { username: string; email: string; password: string }) => void;
+// }
 
-const Signup = ({ onSignUp }: SignUpFormProps) => {
+const Signup = ( ) => {  //SignUpFormProps { onSignUp }:
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
-    onSignUp({ username, email, password });
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    // onSignUp({ username, email, password });
+    // setUsername("");
+    // setEmail("");
+    // setPassword("");
   };
 
   return (

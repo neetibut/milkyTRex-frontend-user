@@ -1,28 +1,33 @@
 import React, { useState } from "react";
 
-interface LoginFormProps {
-  onLogin: (credentials: { email: string; password: string }) => void;
-}
+// interface LoginFormProps {
+//   onLogin: (credentials: { email: string; password: string }) => void;
+// }
 
-const Login: React.FC<LoginFormProps> = ({ onLogin }) => {
+const Login: React.FC = () => {
+  //LoginFormProps { onLogin }
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim() && password.trim()) {
-      onLogin({ email, password });
-      setEmail("");
-      setPassword("");
-    }
+  const handleSubmit = () => {
+    //e: React.FormEvent
+    console.log(email, password);
+
+    // e.preventDefault();
+    // if (email.trim() && password.trim()) {
+    //   onLogin({ email, password });
+    //   setEmail("");
+    //   setPassword("");
+    // }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 relative">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('../src/assets/283547_0.jpg')" }}/>
-        {/* เพิ่มรูป background */}
+        style={{ backgroundImage: "url('../src/assets/283547_0.jpg')" }}
+      />
+      {/* เพิ่มรูป background */}
       <div className="absolute inset-0 bg-black opacity-40" />
 
       <div className="relative w-full max-w-md bg-white p-8 rounded-lg shadow-lg z-10">
@@ -33,7 +38,10 @@ const Login: React.FC<LoginFormProps> = ({ onLogin }) => {
           Quick & Simple way to Automate your payment
         </p>
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center space-y-4">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col items-center space-y-4"
+        >
           <input
             type="email"
             value={email}
@@ -48,7 +56,6 @@ const Login: React.FC<LoginFormProps> = ({ onLogin }) => {
             placeholder="Password"
             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-
           <div className="flex items-center w-full">
             <input type="checkbox" className="mr-2" />
             <p className="text-sm text-gray-600">
@@ -58,17 +65,22 @@ const Login: React.FC<LoginFormProps> = ({ onLogin }) => {
               </a>{" "}
               and{" "}
               <a href="#" className="text-blue-500 underline">
-                Privacy Policy
-              </a>.
+                Privacy Policy.
+              </a>
             </p>
           </div>
-
           <button
             type="submit"
             className="w-full py-2 bg-black text-white rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Login
           </button>
+          <div>
+            หากไม่มีบัญชี ?{" "}
+            <a href="/signup" className="text-blue-500 underline">
+              สมัครสมาชิก
+            </a>
+          </div>
         </form>
 
         <div className="flex items-center my-6">
@@ -95,6 +107,6 @@ const Login: React.FC<LoginFormProps> = ({ onLogin }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Login;
