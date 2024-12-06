@@ -18,7 +18,7 @@ const Tea=()=>{
         <Shopchoice/>
 
         <div className="flex flex-row justify-center  mt-20 pb-20 ">
-            <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/6">
+            <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/5">
                 <div className="flex justify-center  mb-4" >
                     <img src="https://koph.co/img/icons/cocoa.svg" className="w-16 h-16 "></img>
                 </div>
@@ -27,7 +27,7 @@ const Tea=()=>{
                     <h2 className="text-center">Taste Note</h2>
                 </div>
             </section>
-            <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/6">
+            <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/5">
                 <div className="flex justify-center mb-4" >
                     <img src="https://koph.co/img/icons/medium-scale.svg" className="w-16 h-16 "></img>
                 </div>
@@ -36,7 +36,7 @@ const Tea=()=>{
                     <h2 className="text-center">Roast Level</h2>
                 </div>
             </section>
-            <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/6">
+            <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/5">
                 <div className="flex justify-center  mb-4" >
                     <img src="https://koph.co/img/icons/house-blend.svg" className="w-16 h-16 "></img>
                 </div>
