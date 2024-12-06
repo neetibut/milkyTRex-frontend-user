@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-
-import Navbar from "../components/Navbar";
 import Homebanner from "../components/Homebanner";
 import Blog from "../components/Blog";
 import Bgcover from "../assets/Backgroundcover.svg";
@@ -144,7 +142,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
       <div className="flex flex-col justify-center pl-20 bg-fixed bg-cover bg-center min-h-screen min-w-screen">
         <img
           src={Bgcover}

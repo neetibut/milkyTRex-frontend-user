@@ -1,30 +1,17 @@
-import React, { useState } from 'react';
-import Signup from './Signup';
-import Login from './Login';
+import React, { useState } from "react";
+import Signup from "./Signup";
+import Login from "./Login";
 
-// Define interfaces for credentials and user data
-interface LoginCredentials {
-  email: string;
-  password: string;
-}
-
-interface SignUpData {
-  username: string;
-  email: string;
-  password: string;
-}
-
-// Define props interface for the AutoMate component
-interface AutoMateProps {
-  onLogin: (credentials: LoginCredentials) => void;
-  onSignUp: (userData: SignUpData) => void;
+interface AutoMateProps{
+  onLogin: (credentials: { email: string; password: string }) => void;
+  onSignUp: (userData: { username: string; email: string; password: string }) => void;
 }
 
 const AutoMate: React.FC<AutoMateProps> = ({ onLogin, onSignUp }) => {
-  const [isLogin, setIsLogin] = useState<boolean>(true);
+  const [isLogin, setIsLogin] = useState(true);
 
-  const handleToggle = (): void => {
-    setIsLogin(prevState => !prevState);
+  const handleToggle = () => {
+    setIsLogin((prev) => !prev);
   };
 
   return (

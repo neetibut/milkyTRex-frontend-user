@@ -1,24 +1,20 @@
 import React, { useState } from "react";
 
-// interface LoginFormProps {
-//   onLogin: (credentials: { email: string; password: string }) => void;
-// }
+interface LoginProps {
+  onLogin: (credentials: { email: string; password: string }) => void;
+}
 
-const Login: React.FC = () => {
-  //LoginFormProps { onLogin }
+const Login: React.FC<LoginProps> = ({ onLogin }) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const handleSubmit = () => {
-    //e: React.FormEvent
-    console.log(email, password);
-
-    // e.preventDefault();
-    // if (email.trim() && password.trim()) {
-    //   onLogin({ email, password });
-    //   setEmail("");
-    //   setPassword("");
-    // }
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // ป้องกันการ refresh หน้า
+    if (email.trim() && password.trim()) {
+      onLogin({ email, password }); // เรียกใช้ฟังก์ชัน onLogin ที่ส่งมาจาก AutoMate
+      setEmail(""); // เคลียร์ช่องกรอกข้อมูล
+      setPassword("");
+    }
   };
 
   return (
