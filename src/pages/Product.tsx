@@ -1,7 +1,7 @@
 // src/pages/ProductListPage.tsx
-import React from 'react';
-import Sidebar from '../components/Sidebar';
-import ProductCard from '../components/ProductCard';
+import React from "react";
+import Sidebar from "../components/Sidebar";
+import ProductCard from "../components/ProductCard";
 
 type Product = {
   id: number;
@@ -16,7 +16,7 @@ const products: Product[] = Array(16).fill({
   name: "Tea Blend",
   weight: "100g",
   price: "฿125",
-  imageUrl: "./assets/im", 
+  imageUrl: "./assets/im",
 });
 
 const Product: React.FC = () => {

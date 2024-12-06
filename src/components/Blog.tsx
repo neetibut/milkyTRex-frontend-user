@@ -1,8 +1,6 @@
 import backgroundImage from "../assets/backgroundcover.svg";
 
-
 const Blog = () => {
-
   const cards = [
     { title: "Degasความลับที่ทำให้กาแฟของคุณอร่อยขึ้น", img: backgroundImage },
     { title: "อีกหนึ่งเกร็ดความรู้ที่คุณต้องลอง", img: backgroundImage },
@@ -19,11 +17,14 @@ const Blog = () => {
           เริ่มเลย
         </button>
       </div>
-   
-       {/* Cards */}
-       <div className="hidden flex-row  md:flex justify-center gap-5">
+
+      {/* Cards */}
+      <div className="hidden flex-row  md:flex justify-center gap-5">
         {cards.map((card, index) => (
-          <div key={index} className="min-w-[300px] rounded-3xl bg-slate-200 border-2 border-black">
+          <div
+            key={index}
+            className="min-w-[300px] rounded-3xl bg-slate-200 border-2 border-black"
+          >
             <img
               src={card.img}
               className="w-full h-48 object-cover rounded-t-3xl border-2 border-b-black"

@@ -1,25 +1,22 @@
-
-import './App.css'
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import ProductListPage from './pages/ProductListPage';
-import ProductDetailPage from './pages/ProductDetailPage';
-import BlogPage from './pages/BlogPage';
-import Article from './components/Article'; 
-
-
-
-
+import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import ProductListPage from "./pages/ProductListPage";
+import ProductDetailPage from "./pages/ProductDetailPage";
+import BlogPage from "./pages/BlogPage";
+import Article from "./components/Article";
 
 const App: React.FC = () => {
-
-  return ( 
-  <Router>
-    <Navbar />
-    <div className="content" style={{ paddingTop: '100px', paddingBottom:'30px'}}>
+  return (
+    <Router>
+      <Navbar />
+      <div
+        className="content"
+        style={{ paddingTop: "100px", paddingBottom: "30px" }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<ProductListPage />} />
@@ -32,11 +29,9 @@ const App: React.FC = () => {
           <Route path="/article/:id" element={<Article />} />
         </Routes>
       </div>
-      <Footer/>
-  </Router>
-);
+      <Footer />
+    </Router>
+  );
 };
 
 export default App;
-    
-    

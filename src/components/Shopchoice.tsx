@@ -17,7 +17,15 @@ const OPTION_DETAILS: Record<OptionValue, OptionInfo> = {
   '': { label: 'กรุณาเลือก', price: 0, weight: 0 }
 };
 
-const Shopchoice: React.FC = () => {
+interface ShopchoiceProps {
+  initialImageUrl?: string;
+  initialProductName?: string;
+}
+
+const Shopchoice: React.FC<ShopchoiceProps> = ({ 
+  initialImageUrl = 'https://neramitcha.com/wp-content/uploads/2023/09/07-768x768.jpg', 
+  initialProductName = 'Product Name' 
+}) => {
   // Typed state for selected option
   const [selectedOption, setSelectedOption] = useState<OptionValue>('option1');
   
@@ -42,21 +50,24 @@ const Shopchoice: React.FC = () => {
   // Get current option details
   const currentOption = OPTION_DETAILS[selectedOption];
 
+  // Calculate total price
+  const totalPrice = currentOption.price * quantity;
+
   return (
-    <div className='flex flex-row justify-center'>
+    <div className='flex flex-col md:flex-row justify-center'>
       {/* Product Image */}
-      <div className='border-2 w-[300px]'>
+      <div className='border-2 w-full md:w-[300px] mb-4 md:mb-0'>
         <img 
-          src='https://neramitcha.com/wp-content/uploads/2023/09/07-768x768.jpg'
+          src={initialImageUrl}
           alt='Product'
           className='w-full h-auto'
         />
       </div>
 
-      <div className='flex justify-center'>
-        <div className='flex flex-col border-2 w-[300px] p-4'>
+      <div className='flex justify-center w-full md:w-[300px]'>
+        <div className='flex flex-col border-2 w-full p-4'>
           {/* Product Name */}
-          <h2 className='text-lg font-bold pl-4 mb-2'>Product Name</h2>
+          <h2 className='text-lg font-bold pl-4 mb-2'>{initialProductName}</h2>
 
           {/* Price and Weight Display */}
           <p className='pl-4 mb-2'>
@@ -96,8 +107,15 @@ const Shopchoice: React.FC = () => {
             </button>
           </div>
 
+          {/* Total Price Display */}
+          {quantity > 0 && (
+            <p className='text-center mt-2 font-bold'>
+              Total: {totalPrice}฿
+            </p>
+          )}
+
           {/* Add to Basket Button */}
-          <div className='ml-14 mt-4'>
+          <div className='ml-4 mt-4'>
             <ButtonSelect />
           </div>
         </div>

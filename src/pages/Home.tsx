@@ -1,7 +1,7 @@
-
 import Homebanner from "../components/Homebanner";
 import Blog from "../components/Blog";
-import Bgcover from "../assets/Backgroundcover.svg"
+import Bgcover from "../assets/Backgroundcover.svg";
+import Review from "../components/Review"
 
 const Home = () => {
   return (
@@ -37,9 +37,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Homebanner/>
-      <Blog/>
-      
+      <Homebanner />
+      <Review/>
+      <Blog />
     </>
   );
 };
