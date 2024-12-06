@@ -1,6 +1,7 @@
-import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import Shopchoice from "../components/Shopchoice"; // Ensure correct import path
+// src/pages/ProductDetailPage.tsx
+import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import Tea from './Tea';
 
 type Product = {
   id: number;
@@ -43,12 +44,14 @@ const ProductDetailPage: React.FC = () => {
       >
         ← Back to Products
       </button>
-      <Shopchoice
-        initialImageUrl={product.imageUrl}
-        initialProductName={product.name}
-      />
-    </div>
+      
+     <Tea/>
+     </div>
   );
-};
+}
+
+
+
+
 
 export default ProductDetailPage;

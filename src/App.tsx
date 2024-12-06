@@ -1,13 +1,26 @@
-import "./App.css";
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import ProductListPage from "./pages/ProductListPage";
-import ProductDetailPage from "./pages/ProductDetailPage";
-import BlogPage from "./pages/BlogPage";
-import Article from "./components/Article";
+
+import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+// import Login from './pages/Login';
+// import Signup from './pages/Signup';
+// import Loading from './pages/Loading';
+import ProductListPage from './pages/ProductListPage';
+import ProductDetailPage from './pages/ProductDetailPage';
+import BlogPage from './pages/BlogPage';
+import Article from './components/Article'; 
+
+
+
+
+// import Tea from './pages/Tea';
+// import PaymentPopup from './pages/PaymentPopup';
+// import Shopchoice from './components/Shopchoice';
+
+// import ProductDetailPage from './pages/ProductDetailPage';
 
 const App: React.FC = () => {
   return (
@@ -29,9 +42,9 @@ const App: React.FC = () => {
           <Route path="/article/:id" element={<Article />} />
         </Routes>
       </div>
-      <Footer />
-    </Router>
-  );
+      <Footer/>
+  </Router>
+);  
 };
 
 export default App;

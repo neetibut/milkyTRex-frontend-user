@@ -2,29 +2,26 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import { Box, Button } from "@mui/material";
 
-const images = [
-  "https://via.placeholder.com/800x300?text=Slide+1",
-  "https://via.placeholder.com/800x300?text=Slide+2",
-  "https://via.placeholder.com/800x300?text=Slide+3",
+// Define the types for the images and cards
+const images: string[] = [
+  'https://via.placeholder.com/800x300?text=Slide+1',
+  'https://via.placeholder.com/800x300?text=Slide+2',
+  'https://via.placeholder.com/800x300?text=Slide+3',
 ];
 
-const cards = [
-  {
-    title: "Degas ความลับที่ทำให้กาแฟของคุณอร่อยขึ้น",
-    img: "https://via.placeholder.com/300x200",
-  },
-  {
-    title: "อีกหนึ่งเกร็ดความรู้ที่คุณต้องลอง",
-    img: "https://via.placeholder.com/300x200",
-  },
-  {
-    title: "อยากให้กาแฟหอมขึ้น? ลองวิธีนี้!",
-    img: "https://via.placeholder.com/300x200",
-  },
+interface Card {
+  title: string;
+  img: string;
+}
+
+const cards: Card[] = [
+  { title: "Degas ความลับที่ทำให้กาแฟของคุณอร่อยขึ้น", img: 'https://via.placeholder.com/300x200' },
+  { title: "อีกหนึ่งเกร็ดความรู้ที่คุณต้องลอง", img: 'https://via.placeholder.com/300x200' },
+  { title: "อยากให้กาแฟหอมขึ้น? ลองวิธีนี้!", img: 'https://via.placeholder.com/300x200' },
 ];
 
-const BlogPage = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const BlogPage: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
   const navigate = useNavigate(); // ต้องอยู่ภายในคอมโพเนนต์
 
   const handleReadMore = (id: number) => {
@@ -52,19 +49,19 @@ const BlogPage = () => {
         {/* Carousel */}
         <Box
           sx={{
-            width: "100%",
+            width: '100%',
             maxWidth: 800,
-            margin: "0 auto",
-            overflow: "hidden",
-            position: "relative",
+            margin: '0 auto',
+            overflow: 'hidden',
+            position: 'relative',
             borderRadius: 2,
             boxShadow: 3,
           }}
         >
           <Box
             sx={{
-              display: "flex",
-              transition: "transform 0.5s ease-in-out",
+              display: 'flex',
+              transition: 'transform 0.5s ease-in-out',
               transform: `translateX(-${currentIndex * 100}%)`,
             }}
           >
@@ -75,9 +72,10 @@ const BlogPage = () => {
                 src={src}
                 alt={`Slide ${index + 1}`}
                 sx={{
-                  width: "100%",
+                  width: '100%',
                   flexShrink: 0,
                 }}
+                onClick={() => handleReadMore(index)}
               />
             ))}
           </Box>
@@ -85,10 +83,10 @@ const BlogPage = () => {
           <Button
             onClick={handlePrev}
             sx={{
-              position: "absolute",
-              top: "50%",
+              position: 'absolute',
+              top: '50%',
               left: 10,
-              transform: "translateY(-50%)",
+              transform: 'translateY(-50%)',
               zIndex: 1,
             }}
           >
@@ -98,10 +96,10 @@ const BlogPage = () => {
           <Button
             onClick={handleNext}
             sx={{
-              position: "absolute",
-              top: "50%",
+              position: 'absolute',
+              top: '50%',
               right: 10,
-              transform: "translateY(-50%)",
+              transform: 'translateY(-50%)',
               zIndex: 1,
             }}
           >
@@ -110,11 +108,11 @@ const BlogPage = () => {
 
           <Box
             sx={{
-              position: "absolute",
+              position: 'absolute',
               bottom: 10,
-              left: "50%",
-              transform: "translateX(-50%)",
-              display: "flex",
+              left: '50%',
+              transform: 'translateX(-50%)',
+              display: 'flex',
               gap: 1,
             }}
           >
@@ -124,10 +122,9 @@ const BlogPage = () => {
                 sx={{
                   width: 10,
                   height: 10,
-                  borderRadius: "50%",
-                  backgroundColor:
-                    currentIndex === index ? "primary.main" : "grey.500",
-                  transition: "background-color 0.3s",
+                  borderRadius: '50%',
+                  backgroundColor: currentIndex === index ? 'primary.main' : 'grey.500',
+                  transition: 'background-color 0.3s',
                 }}
               />
             ))}
@@ -137,10 +134,7 @@ const BlogPage = () => {
         {/* Card Section */}
         <Box className="flex flex-col items-center md:flex-row justify-center gap-5 mt-10">
           {cards.map((card, index) => (
-            <div
-              key={index}
-              className="w-full sm:w-[380px] md:w-[300px] lg:w-[320px] xl:w-[350px] flex flex-col rounded-3xl bg-slate-200 border-2 border-black"
-            >
+            <div key={index} className="w-full sm:w-[380px] md:w-[300px] lg:w-[320px] xl:w-[350px] flex flex-col rounded-3xl bg-slate-200 border-2 border-black">
               <img
                 src={card.img}
                 className="w-full h-48 object-cover rounded-t-3xl border-2 border-b-black"

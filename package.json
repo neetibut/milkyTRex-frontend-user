@@ -13,9 +13,14 @@
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
     "@mui/material": "^6.1.10",
+<<<<<<< HEAD
     "@mui/styled-engine-sc": "^6.1.10",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0",
+=======
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+>>>>>>> 87e20fcab487d629815d24c7e09bc4ec87d6baaa
     "react-router-dom": "^6.28.0",
     "styled-components": "^6.1.13",
     "swiper": "^11.1.15"
@@ -32,6 +37,7 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
+    "react-router-dom": "^6.28.0",
     "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.11.0",
