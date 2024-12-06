@@ -1,17 +1,18 @@
+import React from "react";
+// import Navbar from "./Navbar";
 
+interface SolutionProps {
+    name: string;
+    image: string;
+}
 
+const SolutionAi: React.FC<SolutionProps> = ({ name, image }) => {
+    return (
+        <div>
+            <img src={image} alt={name}/>
+            <p>{name}</p>
+        </div>
+    )
+}
 
-// const SolutionAi = () => {
-
-//     return (
-//         <div>
-//             <h1>ชาเบลนด์ ที่มี taste note เฉพาะคุณ</h1>
-//             <p>1 กล่อง บรรจุวัตถุดิบชาเบลนด์ 40 g.</p>
-
-//             <div>
-//                 <div></div>
-//                 <div></div>
-//             </div>
-//         </div>
-//     )
-// }
+export default SolutionAi;
