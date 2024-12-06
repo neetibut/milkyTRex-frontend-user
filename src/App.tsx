@@ -13,6 +13,10 @@ import Article from './components/Article';
 
 
 
+import Tea from './pages/Tea';
+import PaymentPopup from './pages/PaymentPopup';
+import Shopchoice from './components/Shopchoice';
+
 
 const App: React.FC = () => {
 
@@ -35,6 +39,26 @@ const App: React.FC = () => {
       <Footer/>
   </Router>
 );
+  return (
+    <Router>
+      <Navbar />
+      
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductListPage />} />
+        <Route path="/products/:id" element={<ProductDetailPage />} />
+        <Route path="/green-tea" element={<ProductListPage />} />
+        <Route path="/black-tea" element={<ProductListPage />} />
+        <Route path="/white-tea" element={<ProductListPage />} />
+        <Route path="/oolong-tea" element={<ProductListPage />} />
+        
+      </Routes>
+      
+      
+      <Footer />
+    </Router>
+  );
 };
 
 export default App;

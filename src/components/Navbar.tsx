@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Cart from './Cart';
 
 const Navbar: React.FC = () => {
     return (
@@ -56,7 +57,8 @@ const Navbar: React.FC = () => {
                                 to="/cart" 
                                 className="hover:text-gray-400 cursor-pointer flex flex-row py-4"
                             >
-                                <i className="fa-solid fa-cart-shopping w-8 h-8 pt-2"></i>
+                                {/* <i class="fa fa-shopping-cart"></i> */}
+                                <Cart/>
                             </Link>
                         </li>
                     </ul>
