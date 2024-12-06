@@ -1,28 +1,30 @@
 import React, { useState } from "react";
 
-// interface SignUpFormProps {
-//   onSignUp: (userData: { username: string; email: string; password: string }) => void;
-// }
+interface SignupProps {
+  onSignUp: (userData: { username: string; email: string; password: string }) => void;
+}
 
-const Signup = ( ) => {  //SignUpFormProps { onSignUp }:
+const Signup: React.FC<SignupProps> = ({ onSignUp }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSignUp = (e: React.FormEvent) => {
-    e.preventDefault();
-    // onSignUp({ username, email, password });
-    // setUsername("");
-    // setEmail("");
-    // setPassword("");
+    e.preventDefault(); // ป้องกันการ refresh หน้า
+    if (username.trim() && email.trim() && password.trim()) {
+      onSignUp({ username, email, password }); // ส่งข้อมูลไปยังฟังก์ชัน onSignUp
+      setUsername(""); // เคลียร์ค่าช่องกรอกข้อมูล
+      setEmail("");
+      setPassword("");
+    }
   };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg relative">
-        <div className="absolute inset-0 bg-cover bg-center" 
-          style={{ backgroundImage: `url('')` }} /> 
-          {/* เพิ่มรูป background */}
+        <div className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('')` }} />
+        {/* เพิ่มรูป background */}
         <div className="absolute inset-0 bg-black opacity-40 rounded-lg" />
         <div className="relative z-10">
           <h2 className="text-center text-2xl font-semibold text-gray-800 mb-2">

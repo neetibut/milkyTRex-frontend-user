@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import Signup from "./Singup";
+import Signup from "./Signup";
 import Login from "./Login";
 
-interface AutoMate{
+interface AutoMateProps{
   onLogin: (credentials: { email: string; password: string }) => void;
   onSignUp: (userData: { username: string; email: string; password: string }) => void;
 }
 
-const AutoMate: React.FC<AutoMate> = ({ onLogin, onSignUp }) => {
+const AutoMate: React.FC<AutoMateProps> = ({ onLogin, onSignUp }) => {
   const [isLogin, setIsLogin] = useState(true);
 
   const handleToggle = () => {
-    setIsLogin(!isLogin);
+    setIsLogin((prev) => !prev);
   };
 
   return (
