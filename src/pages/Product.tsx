@@ -1,6 +1,5 @@
 // src/pages/ProductListPage.tsx
 import React from 'react';
-import Sidebar from '../components/Sidebar';
 import ProductCard from '../components/ProductCard';
 
 type Product = {
@@ -22,8 +21,6 @@ const products: Product[] = Array(16).fill({
 const Product: React.FC = () => {
   return (
     <div className="flex pt-[81px]">
-      {/* Sidebar */}
-      <Sidebar />
 
       {/* Main Content */}
       <main className="w-3/4 p-4">
