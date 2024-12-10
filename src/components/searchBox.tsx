@@ -5,12 +5,12 @@ interface SearchProps {
     onSearch: (query: string) => void
 }
 
-const searchBox: React.FC<SearchProps> = ({ onSearch }) => {
-    const [search, setSeach] = useState<string>('');
+const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
+    const [search, setSearch] = useState<string>('');
 
     // function update search value while typing..
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSeach(event.target.value)
+        setSearch(event.target.value)
     };
 
     // remove space of input value
@@ -39,4 +39,4 @@ const searchBox: React.FC<SearchProps> = ({ onSearch }) => {
     )
 };
 
-export default searchBox
+export default SearchBox
