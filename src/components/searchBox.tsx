@@ -6,7 +6,7 @@ interface SearchProps {
 }
 
 const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
-    const [search, setSearch] = useState<string>('');
+    const [search, setSeach] = useState<string>('');
 
     // function update search value while typing..
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +31,7 @@ const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
                 type="text"
                 value={search}
                 onChange={handleInputChange}
-                onKeyPress={handleKeyPress}
+                onKeyDown={handleKeyPress}
                 placeholder="กรุณากรอกคำค้นหา.."
             />
             <button onClick={ handleSearch } className="bg-slate-500 px-4 py-2 rounded-lg">ค้นหา</button>

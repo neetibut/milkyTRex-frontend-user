@@ -1,6 +1,6 @@
 // src/pages/ProductListPage.tsx
-import React from "react";
-import ProductCard from "../components/ProductCard";
+import React from 'react';
+import ProductCard from '../components/ProductCard';
 
 type Product = {
   id: number;
@@ -21,8 +21,6 @@ const products: Product[] = Array(16).fill({
 const Product: React.FC = () => {
   return (
     <div className="flex pt-[81px]">
-      {/* Sidebar */}
-    
 
       {/* Main Content */}
       <main className="w-3/4 p-4">
