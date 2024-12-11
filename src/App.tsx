@@ -12,6 +12,7 @@ import ProductListPage from './pages/ProductListPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import BlogPage from './pages/BlogPage';
 import Article from './components/Article';
+import Checkout from "./pages/CheckoutPage.tsx";
 
 // import Tea from './pages/Tea';
 // import PaymentPopup from './pages/PaymentPopup';
@@ -46,6 +47,7 @@ const App: React.FC = () => {
           <Route path="/oolong-tea" element={<ProductListPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/article/:id" element={<Article />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
       <Footer />

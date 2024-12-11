@@ -32,7 +32,6 @@ const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
                 value={search}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyPress}
-                onKeyDown={handleKeyPress}
                 placeholder="กรุณากรอกคำค้นหา.."
             />
             <button onClick={ handleSearch } className="bg-slate-500 px-4 py-2 rounded-lg">ค้นหา</button>
@@ -40,5 +39,4 @@ const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
     )
 };
 
-export default SearchBox
 export default SearchBox

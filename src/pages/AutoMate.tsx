@@ -18,7 +18,10 @@ const AutoMate: React.FC<AutoMateProps> = ({ onLogin, onSignUp }) => {
     <div className="auth-container">
       <div className="auth-header">
         <h2>{isLogin ? "Login to Milky Tea-rex" : "Sign up for Milky Tea-rex"}</h2>
-        <button onClick={handleToggle} className="toggle-button">
+        <button 
+          onClick={handleToggle} 
+          className="toggle-button"
+        >
           {isLogin ? "Switch to Sign Up" : "Switch to Login"}
         </button>
       </div>
