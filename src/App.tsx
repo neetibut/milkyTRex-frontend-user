@@ -19,24 +19,25 @@ import Article from './components/Article';
 // import ProductDetailPage from './pages/ProductDetailPage';
 
 const App: React.FC = () => {
-  const handleLogin = (credentials: { email: string; password: string }) => {
-    console.log("Logging in with:", credentials);
-    // ทำการล็อกอินที่นี่
-  };
+  // const handleLogin = (credentials: { email: string; password: string }) => {
+  //   console.log("Logging in with:", credentials);
+  //   // ทำการล็อกอินที่นี่
+  // };
 
-  const handleSignUp = (userData: { username: string; email: string; password: string }) => {
-    console.log("Signing up with:", userData);
-    // ทำการสมัครสมาชิกที่นี่
-  };
+  // const handleSignUp = (userData: { username: string; email: string; password: string }) => {
+  //   console.log("Signing up with:", userData);
+  //   // ทำการสมัครสมาชิกที่นี่
+  // };
 
   return (
+    //onLogin={handleLogin}
     <Router>
       <Navbar />
       <div className="content" style={{ paddingTop: '100px', paddingBottom: '30px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login onLogin={handleLogin} />} />
-          <Route path="/signup" element={<Signup onSignUp={handleSignUp} />} />
+          <Route path="/login" element={<Login />} /> 
+          <Route path="/signup" element={<Signup />} />
           <Route path="/products" element={<ProductListPage />} />
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/green-tea" element={<ProductListPage />} />
