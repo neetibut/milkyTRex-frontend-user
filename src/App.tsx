@@ -1,4 +1,3 @@
-
 import './App.css'
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -16,17 +15,9 @@ import Article from './components/Article';
 // import PaymentPopup from './pages/PaymentPopup';
 // import Shopchoice from './components/Shopchoice';
 // import ProductDetailPage from './pages/ProductDetailPage';
+import CustomProduct from './pages/CustomProduct';
 
 const App: React.FC = () => {
-  // const handleLogin = (credentials: { email: string; password: string }) => {
-  //   console.log("Logging in with:", credentials);
-  //   // ทำการล็อกอินที่นี่
-  // };
-
-  // const handleSignUp = (userData: { username: string; email: string; password: string }) => {
-  //   console.log("Signing up with:", userData);
-  //   // ทำการสมัครสมาชิกที่นี่
-  // };
 
   return (
     //onLogin={handleLogin}
@@ -37,6 +28,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} /> 
           <Route path="/signup" element={<Signup />} />
+          <Route path="/custom-product" element={<CustomProduct />} />
           <Route path="/products" element={<ProductListPage />} />
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/green-tea" element={<ProductListPage />} />

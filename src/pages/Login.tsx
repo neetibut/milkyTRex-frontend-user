@@ -5,19 +5,24 @@ import { useEffect, useState } from "react";
 import { validateEmail } from "../utils/helper";
 import axiosInstance from "../utils/axiosinstance";
 import axios from "axios";
+
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-
+  const backendUrl= import.meta.env.VITE_BACKEND_URL;
+  
   const navigate = useNavigate();
 
   useEffect(() => {
     const checkServerConnection = async () => {
+      
       try {
         await axiosInstance.get("/"); // เรียก API เชื่อมต่อเซิร์ฟเวอร์หลัก
         console.log("เชื่อมต่อกับเซิร์ฟเวอร์ได้");
+        
+        
         setLoading(true);
       } catch (error) {
         console.error("ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้", error);
@@ -30,6 +35,8 @@ const Login: React.FC = () => {
 
     return () => clearInterval(intervalId);
   }, [loading]);
+
+  console.log("เชื่อมต่อ BackendUrl",backendUrl);
 
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,7 +53,7 @@ const Login: React.FC = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:8000/api/user/login", {
+      const response = await axios.post(backendUrl + "/api/user/login", {
         email: email,
         password: password,
       });

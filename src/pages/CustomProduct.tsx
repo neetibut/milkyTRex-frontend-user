@@ -2,7 +2,7 @@ import SolutionAi from "../components/SolutionAi";
 import arrowleft from "../assets/green-tea.png";
 import productboxAi from "../assets/productboxAi.png";
 
-const Ai = () => {
+const CustomProduct = () => {
   return (
     <div>
         <h1 className="text-center">ชาเบลนด์ ที่มี taste note เฉพาะคุณ</h1>
@@ -33,4 +33,4 @@ const Ai = () => {
   );
 };
 
-export default Ai;
+export default CustomProduct;
