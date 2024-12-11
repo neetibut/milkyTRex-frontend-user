@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const articles = [
   { id: 0, title: "Degas ความลับที่ทำให้กาแฟของคุณอร่อยขึ้น", content: "เนื้อหาเต็มของบทความ 1...", img: 'https://via.placeholder.com/300x200' },

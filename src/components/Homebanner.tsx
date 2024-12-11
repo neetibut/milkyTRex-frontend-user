@@ -1,7 +1,7 @@
-import glass from '../assets/glass.png'
-import greenTea from '../assets/green-tea.png'
-import tea from '../assets/tea.png'
-import phone from '../assets/phone.png'
+import glass from "../assets/glass.png";
+import greenTea from "../assets/green-tea.png";
+import tea from "../assets/tea.png";
+import phone from "../assets/phone.png";
 
 const Homebanner = () => {
   return (
@@ -33,11 +33,7 @@ const Homebanner = () => {
         {/* Bottom Row */}
         <div className=" h-full bg-green-300 flex-1  p-4 pb-0 flex flex-col justify-between shadow-md hover:scale-110 transition duration-300">
           <p className="text-white font-semibold">4 โรงอบในกล่องเดียว</p>
-          <img
-            src={tea}
-            className="ml-auto mt-auto"
-            alt="4 tea packages"
-          />
+          <img src={tea} className="ml-auto mt-auto" alt="4 tea packages" />
         </div>
       </div>
 

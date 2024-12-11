@@ -6,11 +6,11 @@ interface SearchProps {
 }
 
 const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
-    const [search, setSeach] = useState<string>('');
+    const [search, setSearch] = useState<string>('');
 
     // function update search value while typing..
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSeach(event.target.value)
+        setSearch(event.target.value)
     };
 
     // remove space of input value

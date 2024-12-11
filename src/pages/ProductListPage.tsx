@@ -72,6 +72,7 @@ import React, { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import ProductCard from '../components/ProductCard';
 import products from '../database/teaProducts';
+import { Link } from 'react-router-dom';
 
 
 const ProductListPage: React.FC = () => {
@@ -99,7 +100,6 @@ const ProductListPage: React.FC = () => {
   );
   
 
-
   return (
     <div className="flex pt-24">
       <Sidebar onCategoryChange={handleCategoryChange} onSearch={handleSearch} />
@@ -111,13 +111,17 @@ const ProductListPage: React.FC = () => {
 
         <div className="grid grid-cols-4 gap-4">
           {filteredProducts.map((product) => (
-            <ProductCard
-              key={product.id}
-              name={product.name}
-              weight={product.weight}
-              price={product.price}
-              imageUrl={product.imageUrl}
-            />
+            <Link to={`/product/${product.id}`} key={product.id}>
+              <ProductCard
+                id={product.id}
+                name={product.name}
+                weight={product.weight}
+                price={product.price}
+                imageUrl={product.imageUrl}
+              />
+            </Link>
+     
+
           ))}
         </div>
       </main>
