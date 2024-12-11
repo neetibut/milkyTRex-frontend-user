@@ -13,14 +13,17 @@ const Cart: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="flex right-0">
       <button
         className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
         onClick={handleOpenPopup}
       >
         <i className="fa fa-shopping-cart"></i>
       </button>
-      <PopupWindow isOpen={isPopupOpen} onClose={handleClosePopup} />
+      <PopupWindow 
+        isOpen={isPopupOpen} 
+        onClose={handleClosePopup} 
+        />
     </div>
   );
 };

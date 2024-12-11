@@ -6,11 +6,11 @@ interface SearchProps {
 }
 
 const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
-    const [search, setSeach] = useState<string>('');
+    const [search, setSearch] = useState<string>('');
 
     // function update search value while typing..
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSeach(event.target.value)
+        setSearch(event.target.value)
     };
 
     // remove space of input value
@@ -32,6 +32,7 @@ const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
                 value={search}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyPress}
+                onKeyDown={handleKeyPress}
                 placeholder="กรุณากรอกคำค้นหา.."
             />
             <button onClick={ handleSearch } className="bg-slate-500 px-4 py-2 rounded-lg">ค้นหา</button>
@@ -39,4 +40,5 @@ const SearchBox: React.FC<SearchProps> = ({ onSearch }) => {
     )
 };
 
+export default SearchBox
 export default SearchBox
