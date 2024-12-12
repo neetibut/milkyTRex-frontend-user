@@ -1,3 +1,5 @@
+import OolongTea from "../assets/Oolong-tea.jpg"
+
 export interface Product {
     id: number;
     name: string;
@@ -35,7 +37,7 @@ const products: Product[] = [
         name: "Oolong Tea Premium", 
         weight: "100g", 
         price: "฿175", 
-        imageUrl: "/path/to/oolong-tea-image.jpg", 
+        imageUrl: OolongTea, 
         category: "ชาอู่หลง",
         description: "ชาอู่หลงพรีเมียม ผ่านกระบวนการหมักอย่างพิถีพิถัน",
         ingredients: ["ใบชาอู่หลง"]
