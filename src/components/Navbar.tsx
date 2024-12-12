@@ -1,8 +1,15 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Cart from './Cart';
+import CartButton from './CartButton';
+import { CartItem } from './ProductCart'; // นำเข้า CartItem เพื่อใช้ในการกำหนด type ของ cartItems
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  cartItems: CartItem[]; // ประกาศว่า Navbar รับ prop ชื่อ cartItems
+  setCartItems: React.Dispatch<React.SetStateAction<CartItem[]>>; // และ setCartItems
+}
+
+const Navbar: React.FC<NavbarProps> = ({ cartItems, setCartItems }) => {
     return (
         <div className='bg-black fixed w-full z-50'>
             <div className="flex justify-between items-center bg-white text-black px-6 py-2 shadow-lg">
@@ -34,7 +41,7 @@ const Navbar: React.FC = () => {
                                     Blog
                                 </Link>
                             </li>
-                        </ul>
+                            </ul>
                     </div>
                 </div>
 
@@ -53,19 +60,14 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link
-                                to="/cart"
-                                className="hover:text-gray-400 cursor-pointer flex flex-row py-4"
-                            >
-                                {/* <i class="fa fa-shopping-cart"></i> */}
-                                <Cart/>
-                            </Link>
+                            {/* ส่ง cartItems และ setCartItems ไปที่ CartButton */}
+                            <CartButton cartItems={cartItems} setCartItems={setCartItems} />
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Navbar;

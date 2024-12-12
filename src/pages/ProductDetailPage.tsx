@@ -17,6 +17,11 @@ const ProductDetailPage: React.FC = () => {
     return <div>Product Not Found</div>;
   }
 
+  const productWithNumericPrice = {
+    ...product,
+  };
+
+
   return (
     <div className="container mx-auto p-4">
       <button 
@@ -32,7 +37,7 @@ const ProductDetailPage: React.FC = () => {
             <li>Tea</li>
       </ul>
 
-     <Shopchoice product={product}/>
+     <Shopchoice product={productWithNumericPrice}/>
 
       <div className="flex flex-row justify-center  mt-20 pb-20 ">
         <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/5">
