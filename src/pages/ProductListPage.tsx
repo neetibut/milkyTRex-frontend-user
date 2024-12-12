@@ -86,7 +86,9 @@ const ProductListPage: React.FC = () => {
   };
 
   const handleSearch = (query: string) => {
+    setSelectedCategory('ทั้งหมด');
     setSearchQuery(query); // อัปเดตคำค้นหา
+    
   };
 
   // กรองสินค้า
