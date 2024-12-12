@@ -4,7 +4,6 @@ import ButtonSelect from './ButtonSelect';
 import ProductCart, { CartItem } from './ProductCart';
 import { OptionValue, OptionDetails } from '../database/teaOptionDetails';
 import { Product } from '../database/teaProducts';
-import blackTea from '../assets/Black-tea.jpg';
 
 // Interface สำหรับ Props ของ Shopchoice
 interface ShopchoiceProps {
@@ -31,7 +30,7 @@ const Shopchoice: React.FC<ShopchoiceProps> = ({ product }) => {
       name: product.name,
       price: currentOption.price,
       quantity,
-      imageUrl: blackTea, // รูปสินค้าชั่วคราว
+      imageUrl: product.imageUrl, // รูปสินค้าชั่วคราว
     };
     setCartItems((prev) => [...prev, newItem]);
     setIsCartOpen(true); // เปิดตะกร้า
@@ -60,7 +59,7 @@ const Shopchoice: React.FC<ShopchoiceProps> = ({ product }) => {
       {/* ส่วนแสดงรูปสินค้า */}
       <div className='border-2 w-[300px]'>
         <img
-          src={blackTea} // รูปสินค้าชั่วคราว
+          src={product.imageUrl} // รูปสินค้าชั่วคราว
           alt={product.name}
           className='w-full h-auto'
         />
