@@ -99,21 +99,24 @@ const ReviewSlider: React.FC = () => {
               }}
             >
               {reviews.map((review, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex flex-col space-y-6 p-6 bg-gray-100 rounded-xl shadow-lg max-w-xs w-full"
                 >
                   <div className="flex items-center space-x-6">
                     <div className="border-4 border-red-400 rounded-full overflow-hidden">
                       <img
-                        src={review.profileImage || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtjT6GQmlhJbTxGAZJMqjF6OiK9wdRPskxMg&s"}
+                        src={
+                          review.profileImage ||
+                          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtjT6GQmlhJbTxGAZJMqjF6OiK9wdRPskxMg&s"
+                        }
                         className="w-20 h-20 object-cover"
                         alt="profile"
                       />
                     </div>
                     <div className="flex flex-col items-start space-y-2">
                       <div className="font-bold text-lg text-gray-800">
-                        {review.name || 'Anonymous'}
+                        {review.name || "Anonymous"}
                       </div>
                       <div className="flex items-center space-x-2">
                         <div className="text-gray-600 text-base font-bold">
@@ -125,7 +128,7 @@ const ReviewSlider: React.FC = () => {
                     </div>
                   </div>
                   <div className="text-gray-800 text-lg">
-                    "{review.comment || 'No comment provided'}"
+                    "{review.comment || "No comment provided"}"
                   </div>
                 </div>
               ))}
@@ -173,7 +176,10 @@ const renderStars = (rating: number): React.ReactNode => {
   return (
     <>
       {[...Array(fullStars)].map((_, i) => (
-        <i key={`full-${i}`} className="fas fa-star text-yellow-500 text-sm"></i>
+        <i
+          key={`full-${i}`}
+          className="fas fa-star text-yellow-500 text-sm"
+        ></i>
       ))}
       {halfStar > 0 && (
         <i className="fas fa-star-half-alt text-yellow-500 text-sm"></i>

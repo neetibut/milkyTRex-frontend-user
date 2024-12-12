@@ -115,7 +115,7 @@ const Shopchoice: React.FC<ShopchoiceProps> = ({ product }) => {
           <div className='ml-14 mt-4'>
             <ButtonSelect onClick={handleAddToCart} />
           </div>
-          
+
         </div>
       </div>
 

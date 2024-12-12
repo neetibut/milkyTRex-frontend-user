@@ -33,7 +33,7 @@ const ProductDetailPage: React.FC = () => {
       </ul>
 
      <Shopchoice product={product}/>
-     
+
       <div className="flex flex-row justify-center  mt-20 pb-20 ">
         <section className="flex flex-col border-4 px-10 py-10 mr-6 w-1/5">
             <div className="flex justify-center  mb-4" >

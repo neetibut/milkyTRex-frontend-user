@@ -1,4 +1,3 @@
-
 import { useState, FormEvent } from "react";
 
 import PasswordInput from "../components/PasswordInput";
@@ -12,6 +11,7 @@ const SignUp: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
+  const backendUrl= import.meta.env.VITE_BACKEND_URL;
 
   const navigate = useNavigate();
 
@@ -22,6 +22,8 @@ const SignUp: React.FC = () => {
       setError("กรุณาใส่ชื่อผู้ใช้งาน");
       return;
     }
+
+    console.log("เชื่อมต่อ BackendUrl",backendUrl);
 
     if (!validateEmail(email)) {
       setError("กรุณากรอก Email ให้ถูกต้อง");
@@ -37,7 +39,7 @@ const SignUp: React.FC = () => {
 
     // SignUp API call
     try {
-      const response = await axiosInstance.post("http://localhost:8000/api/user/register", {
+      const response = await axiosInstance.post(backendUrl + "/api/user/register", {
         fullName: name,
         email: email,
         password: password,
@@ -73,9 +75,6 @@ const SignUp: React.FC = () => {
 
   return (
     <>
-
-
-
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
         <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-lg relative">
           <div className="absolute inset-0 bg-cover bg-center"

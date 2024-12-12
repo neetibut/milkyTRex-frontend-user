@@ -13,7 +13,7 @@ type ProductCardProps = {
 
 const ProductCard: React.FC<ProductCardProps> = ({ 
   id,
-  name, 
+  name,
   weight, 
   price
   
@@ -22,9 +22,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
     <div className="border p-4 rounded-lg transition-transform hover:scale-105 hover:shadow-lg">
       <Link to={`/products/${id}`} className="block border p-4 rounded shadow hover:shadow-lg">
         <div className="relative aspect-square mb-2">
-          <img 
-            src={rainbow} 
-            alt={name} 
+          <img
+            src={rainbow}
+            alt={name}
             className="w-full h-full object-cover rounded-md"
             onError={(e) => {
               e.currentTarget.src = '/placeholder.jpg'; // ใส่รูป placeholder กรณีโหลดรูปไม่สำเร็จ
