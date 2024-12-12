@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Signup from "./Signup";
 import Login from "./Login";
 
+// ไม่ใช้ props
 // interface AutoMateProps{
 //   onLogin: (credentials: { email: string; password: string }) => void;
 //   onSignUp: (userData: { username: string; email: string; password: string }) => void;
